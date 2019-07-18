@@ -177,16 +177,10 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       }
     }
 
-    if (this._element) {
-      this._element.focus();
-    }
-
     suggestionSelected ? this.hide() : this.show();
 
     if (typeof onChange === 'function') {
-      onChange({
-        value,
-      });
+      onChange({ value });
     }
   }
 
